@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import joblib
 import pandas as pd
 from fastapi.middleware.cors import CORSMiddleware
-
+import numpy as np
 app = FastAPI()
 
 app.add_middleware(
@@ -25,7 +25,7 @@ def home():
 @app.post("/predict")
 def predict(customer: dict):
 
-    df = pd.DataFrame([customer])
+    df = pd.DataFrame([customer]).replace("unknown", np.nan)
 
     prediction = model.predict(df)[0]
 
