@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #111827;
+  color: rgb(4, 1, 1);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 36px;
+}
+
+.header p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.form-card {
+  background: white;
+  color: rgba(14, 9, 9, 0.598) ;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  color: rgba(14, 9, 9, 0.598) ;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+  color: rgba(14, 9, 9, 0.598) ;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.result-card {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.result-card h2 {
+  margin-top: 0;
+}
+
+.result-icon {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.positive {
+  border-top: 6px solid #16a34a;
+}
+
+.negative {
+  border-top: 6px solid #dc2626;
+}
+
+.positive .result-icon {
+  color: #16a34a;
+}
+
+.negative .result-icon {
+  color: #dc2626;
+}
+
+.result-card h3 {
+  font-size: 24px;
+}
+
+.probability {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.progress-bar {
+  max-width: 500px;
+  height: 15px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.error {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+}
